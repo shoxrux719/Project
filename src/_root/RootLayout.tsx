@@ -1,36 +1,95 @@
+import { Button } from "@/components/ui/button"
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
+
 import React from 'react'
 import { Outlet, Navigate, NavLink } from 'react-router-dom'
 
 const RootLayout = () => {
     return (
-        <div className=''>
-            <nav className='flex justify-between b1px] items-center p-4  container mx-auto sticky '>
-               
-                <img className='w-[146px] h-[18px]' src="//gh.uz/wp-content/uploads/new-logo-gh.svg" alt="Golden House" />
+        <div className='bg-black'>
+            <nav className='flex justify-between bg-black items-center pt-[44px]  container mx-auto sticky '>
+                <ul className='flex '>
+                    <li className='w-[100px] h-[42px] bg-white text-center flex items-center justify-center rounded-3xl'>
+                        Home
+                    </li>
+                    <li className='w-[107px] h-[42px] bg-black border-white border-[2px] text-white flex items-center justify-center rounded-3xl hover:bg-white hover:text-black'>
+                        Kurslar
+                    </li>
+                    <li className='w-[167px] h-[42px] bg-black border-white border-[2px] text-white flex gap-5  items-center justify-center rounded-3xl hover:bg-white hover:text-black'>
+                        Ekskursiya
+                        <img src="/public/assets/images/Dropdown Icon.png" alt="" />
+                    </li>
+                    <li className='w-[100px] h-[42px] bg-black border-white border-[2px] text-white flex items-center justify-center rounded-3xl hover:bg-white hover:text-black'>
+                        Aloqa
+                    </li>
 
-                <ul className='flex space-x-6 text-[12px]'>
-                    <NavLink to='/to' end>
-                        <li>Квартиры</li>
-                    </NavLink>
-                    <li>Коммерция</li>
-                    <li>Ипотека</li>
-                    <li>О компании</li>
-                    <li>Партнёры</li>
-                    <li>Вакансии</li>
-                    <li>Новости</li>
-                    <li>Контакты</li>
                 </ul>
+                <div className="flex gap-8 items-center">
+                    <Select>
+                        <SelectTrigger className="w-[70px] h-[42px]  flex items-center justify-between rounded-full bg-white px-4 shadow-md">
+                            <SelectValue className="text-black" placeholder="EN" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="uz">O‘Z</SelectItem>
+                            <SelectItem value="en">En</SelectItem>
+                            <SelectItem value="ru">Ру</SelectItem>
+                        </SelectContent>
+                    </Select>
+
+                    <Button className="flex gap-5 font-semibold bg-white text-black rounded-3xl w-[242px] h-[54px] hover:bg-black hover:text-white hover:border-white border-[2px] ">
+                        Biz bilan boglanish
+                        <div className="svg-container">
+                            <svg
+                                className="Svg_icon"
+                                width="22"
+                                height="20"
+                                viewBox="0 0 22 20"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M6.3724 10.6923C6.77587 10.6923 7.10295 10.3824 7.10295 10C7.10295 9.61765 6.77587 9.30769 6.3724 9.30769C5.96892 9.30769 5.64184 9.61765 5.64184 10C5.64184 10.3824 5.96892 10.6923 6.3724 10.6923Z"
+                                    stroke="black"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                                <path
+                                    d="M11.121 10.6923C11.5245 10.6923 11.8515 10.3824 11.8515 10C11.8515 9.61765 11.5245 9.30769 11.121 9.30769C10.7175 9.30769 10.3904 9.61765 10.3904 10C10.3904 10.3824 10.7175 10.6923 11.121 10.6923Z"
+                                    stroke="black"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                                <path
+                                    d="M15.8696 10.6923C16.2731 10.6923 16.6001 10.3824 16.6001 10C16.6001 9.61765 16.2731 9.30769 15.8696 9.30769C15.4661 9.30769 15.139 9.61765 15.139 10C15.139 10.3824 15.4661 10.6923 15.8696 10.6923Z"
+                                    stroke="black"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                                <path
+                                    d="M11.4863 1C9.76836 1.00051 8.08276 1.44258 6.60901 2.27913C5.13526 3.11568 3.92854 4.31537 3.11739 5.75044C2.30624 7.18551 1.92103 8.80221 2.00279 10.4283C2.08455 12.0545 2.63022 13.6291 3.58168 14.9846L1.98907 19L7.32212 18.0862C8.60629 18.6808 10.0156 18.9932 11.4448 18.9999C12.8741 19.0066 14.2866 18.7075 15.5769 18.1249C16.8673 17.5423 18.0022 16.6912 18.8971 15.6351C19.792 14.579 20.4238 13.345 20.7455 12.0253C21.0671 10.7056 21.0703 9.33403 20.7547 8.01298C20.4392 6.69192 19.813 5.4554 18.923 4.39558C18.0329 3.33577 16.9019 2.48 15.6143 1.89207C14.3266 1.30413 12.9156 0.999202 11.4863 1Z"
+                                    stroke="black"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                />
+                            </svg>
+                        </div>
 
 
-                <div className='flex gap-1 items-center'>
-                    <p className='font-bold text-[13px] mr-[53px]'>+998 (78) 113-03-85</p>
-                    <img className='w-4 h-3 rounded-[2px]' src="/public/assets/images/uz.png" alt="" />
 
-                    <p className='text-[12px]'>UZ</p>
-                    <svg className='ml-[10px]' xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"><path fill="currentColor" d="M11.98 19.094q-.291 0-.577-.106q-.286-.105-.503-.323L9.752 17.63q-2.67-2.425-4.71-4.717Q3 10.622 3 8.15q0-1.908 1.296-3.204T7.5 3.65q1.094 0 2.279.553T12 6.289q1.037-1.533 2.221-2.086T16.5 3.65q1.908 0 3.204 1.296T21 8.15q0 2.529-2.125 4.862t-4.652 4.622l-1.142 1.031q-.218.218-.513.323t-.587.106m-.47-11.767q-.898-1.448-1.867-2.063Q8.675 4.65 7.5 4.65q-1.5 0-2.5 1t-1 2.5q0 1.108.627 2.272q.627 1.165 1.684 2.386q1.056 1.22 2.429 2.498q1.371 1.277 2.856 2.629q.173.154.404.154t.404-.154q1.485-1.352 2.857-2.63q1.372-1.276 2.429-2.497q1.056-1.222 1.683-2.386T20 8.15q0-1.5-1-2.5t-2.5-1q-1.175 0-2.144.615q-.97.614-1.867 2.062q-.08.135-.214.202T12 7.596t-.275-.067t-.213-.202M12 11.398" /></svg>
+                    </Button>
                 </div>
             </nav>
-            <hr />
+
             <Outlet />
             <footer>
                 footer
