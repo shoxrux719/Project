@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 const CarouselCard: React.FC = () => {
   return (
     <div className="w-[411px] h-[498px] rounded-[30px] bg-[#1E1E1E] px-5 pt-5">
-      <div className="w-[371px] h-[350px] rounded-[10px] bg-[#C4C4C4] mb-8"></div>
+      <div className="w-[371px] h-[350px] rounded-[10px] bg-[#C4C4C4] mb-8">
+        <img className="p-10" src="/public/assets/images/T-Rex.png" alt="" />
+      </div>
 
       <div className="flex items-center justify-between">
         <div>

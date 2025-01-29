@@ -1,8 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
-
+import '@fontsource/poppins/700.css'; // Жирный стиль (700)
 import Home from './_root/pages/Home'
 import RootLayout from './_root/RootLayout'
-import About from './_root/pages/About'
 
 function App() {
   return (
@@ -10,7 +9,6 @@ function App() {
       
       <Route element={<RootLayout />}>
         <Route index element={<Home />} />
-        <Route path='/about' element={<About />} />
       </Route>
     </Routes>
   )

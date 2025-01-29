@@ -12,20 +12,21 @@ import { Outlet, Navigate, NavLink } from 'react-router-dom'
 
 const RootLayout = () => {
     return (
-        <div className='bg-black'>
-            <nav className='flex justify-between bg-black items-center pt-[44px]  container mx-auto sticky '>
-                <ul className='flex '>
+        <div className='bg-[#0F0F11]'>
+            <nav className='flex justify-between bg-[#0F0F11] items-center pt-[24px]  container mx-auto sticky '>
+                <ul className='flex items-center'>
+                <img className="w-[50px] h-[50px]" src="/public/assets/images/Logo.png" alt="" />
                     <li className='w-[100px] h-[42px] bg-white text-center flex items-center justify-center rounded-3xl'>
                         Home
                     </li>
-                    <li className='w-[107px] h-[42px] bg-black border-white border-[2px] text-white flex items-center justify-center rounded-3xl hover:bg-white hover:text-black'>
+                    <li className='w-[107px] h-[42px] bg-[#0F0F11] border-white border-[2px] text-white flex items-center justify-center rounded-3xl hover:bg-white hover:text-black'>
                         Kurslar
                     </li>
-                    <li className='w-[167px] h-[42px] bg-black border-white border-[2px] text-white flex gap-5  items-center justify-center rounded-3xl hover:bg-white hover:text-black'>
+                    <li className='w-[167px] h-[42px] bg-[#0F0F11] border-white border-[2px] text-white flex gap-5  items-center justify-center rounded-3xl hover:bg-white hover:text-black'>
                         Ekskursiya
                         <img src="/public/assets/images/Dropdown Icon.png" alt="" />
                     </li>
-                    <li className='w-[100px] h-[42px] bg-black border-white border-[2px] text-white flex items-center justify-center rounded-3xl hover:bg-white hover:text-black'>
+                    <li className='w-[100px] h-[42px] bg-[#0F0F11] border-white border-[2px] text-white flex items-center justify-center rounded-3xl hover:bg-white hover:text-black'>
                         Aloqa
                     </li>
 
